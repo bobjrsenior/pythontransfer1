@@ -1,14 +1,13 @@
 #!/bin/python
 
-from gpiozero import LED
+from gpiozero import LED, BUTTON
+from gpiozero import 
 from time import sleep
 
 led = LED(2)
+button = BUTTON(14)
 
-led.on()
-sleep(5)
-led.off()
-sleep(5)
-led.on()
-sleep(2)
-led.off()
+button.when_pressed = led.on
+button.when_released = led.off
+
+sleep(60)
