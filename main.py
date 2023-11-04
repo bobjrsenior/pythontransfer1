@@ -11,7 +11,7 @@ button = Button(14)
 button.when_pressed = led.on
 button.when_released = led.off
 
-song = AudioSegment.from_wav("audio/woah.mp3")
+song = AudioSegment.from_wav("audio/woah.wav")
 play(song)
 
 sleep(60)
