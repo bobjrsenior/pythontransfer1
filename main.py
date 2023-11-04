@@ -1,7 +1,6 @@
 #!/bin/python
 
 from gpiozero import LED, BUTTON
-from gpiozero import 
 from time import sleep
 
 led = LED(2)
