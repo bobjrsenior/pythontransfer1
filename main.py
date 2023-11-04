@@ -10,6 +10,6 @@ button = Button(14)
 button.when_pressed = led.on
 button.when_released = led.off
 
-playsound('audio/woah.ogg')
+playsound('audio/woah.mp3')
 
 sleep(60)
