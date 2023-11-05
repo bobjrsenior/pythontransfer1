@@ -50,7 +50,7 @@ while not lost and not won:
     if completed_action:
         completed_actions += 1
         current_action = random.choice(actions)
-        competed_action = False
+        completed_action = False
         play_sound(current_action)
         step_time = int(step_time * 0.95)
         step_start = get_time()
