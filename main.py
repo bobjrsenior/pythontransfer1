@@ -7,7 +7,7 @@ from pydub.playback import play
 import random
 import time
 
-step_time = 20000
+step_time = 2000000
 #actions = ["LEFT", "MIDDLE", "RIGHT", "WIRES"]
 actions = ["LEFT"]
 current_action = None
@@ -31,12 +31,14 @@ def get_time():
 
 def button_left_pressed():
     led.on
+    print("LEFT")
     if current_action == "LEFT":
         completed_action = True
         print("COMPLETED ACTION")
 
 def button_left_released():
     led.off
+    print("OFF")
 
 
 
