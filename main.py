@@ -18,6 +18,15 @@ LEFT_RED_LED = 17
 RIGHT_RED_LED = 6
 GREEN_LED = 10
 
+current_win_count = 0
+button_presses_to_win = 20
+
+save_filename = "wins.txt"
+
+with open("wins.txt", "r") as file:
+    current_win_count = int(file.read())
+    
+button_presses_to_win += current_win_count * 2
 step_time = 20000
 actions = ["LEFT", "MIDDLE", "RIGHT", "WIRES"]
 #actions = ["WIRES"]
@@ -170,10 +179,10 @@ right_red_led.on()
 while not lost and not won:
     if completed_action:
         completed_actions += 1
-        if completed_actions >= 20:
+        if completed_actions >= button_presses_to_win:
             won = True
             break
-        elif completed_actions >= 10:
+        elif completed_actions >= button_presses_to_win / 2:
             left_red_led.off()
         current_action = random.choice(actions)
         print(current_action)
@@ -208,5 +217,8 @@ elif won:
     sleep(2)
     song = get_win_haiku()
     play(song)
+    with open("wins.txt", "w") as file:
+        file.write(str(current_win_count + 1))
+   
 
 print("GAME_COMPLETED")
