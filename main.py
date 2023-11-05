@@ -27,7 +27,7 @@ def play_sound(action):
     play(get_clip(action))
 
 def get_time():
-    return time.time_ns() * 1000 * 1000
+    return time.time_ns() / 1000 / 1000
 
 def button_left_pressed():
     led.on
