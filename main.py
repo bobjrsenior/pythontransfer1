@@ -8,8 +8,8 @@ import random
 import time
 
 step_time = 2000
-#actions = {"LEFT", "MIDDLE", "RIGHT", "WIRES"}
-actions = {"LEFT"}
+#actions = ["LEFT", "MIDDLE", "RIGHT", "WIRES"]
+actions = ["LEFT"]
 current_action = None
 won = False
 lost = False
