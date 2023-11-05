@@ -54,6 +54,7 @@ while not lost and not won:
         play_sound(current_action)
         step_time = int(step_time * 0.95)
         step_start = get_time()
+        print("STEP: " + str(step_start))
     elif get_time() > step_start + step_time:
         print("LOST")
         lost = True
