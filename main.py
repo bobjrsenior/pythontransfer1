@@ -7,7 +7,7 @@ from pydub.playback import play
 import random
 import time
 
-step_time = 2000
+step_time = 20000
 #actions = ["LEFT", "MIDDLE", "RIGHT", "WIRES"]
 actions = ["LEFT"]
 current_action = None
