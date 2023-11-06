@@ -170,7 +170,7 @@ wires_button.when_released = button_wires_released
 green_led.on()
 
 song = AudioSegment.from_file("audio/Intro.wav", format="wav")
-#play(song)
+play(song)
 
 green_led.off()
 left_red_led.on()
